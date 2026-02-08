@@ -62,7 +62,7 @@ export default function Brands() {
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4, delay: 1 * 0.05, ease: "easeOut" }}
-            viewport={{ once: false, amount: 0.4 }}
+            viewport={{ once: true, amount: 0.4 }}
             whileHover={{ y: -8, scale: 1.05 }}
             className="group relative bg-white/70 backdrop-blur-lg p-6 rounded-2xl shadow-xl border border-white/40 
              flex flex-col items-center justify-center text-center bg-blue-100"
@@ -84,7 +84,7 @@ export default function Brands() {
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4, delay: 2 * 0.05, ease: "easeOut" }}
-            viewport={{ once: false, amount: 0.4 }}
+            viewport={{ once: true, amount: 0.4 }}
             whileHover={{ y: -8, scale: 1.05 }}
             className="group relative bg-white/70 backdrop-blur-lg p-6 rounded-2xl shadow-xl border border-white/40 
              flex flex-col items-center justify-center text-center bg-blue-100"
@@ -106,7 +106,7 @@ export default function Brands() {
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4, delay: i * 0.05, ease: "easeOut" }}
-              viewport={{ once: false, amount: 0.4 }}
+              viewport={{ once: true, amount: 0.4 }}
               whileHover={{ y: -8, scale: 1.05 }}
               className="group relative bg-white/70 backdrop-blur-lg p-6 rounded-2xl shadow-xl border border-white/40 
              flex flex-col items-center justify-center text-center bg-blue-100"
@@ -136,7 +136,7 @@ export default function Brands() {
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4, delay: 27 * 0.05, ease: "easeOut" }}
-            viewport={{ once: false, amount: 0.4 }}
+            viewport={{ once: true, amount: 0.4 }}
             whileHover={{ y: -8, scale: 1.05 }}
             className="group relative bg-white/70 backdrop-blur-lg p-6 rounded-2xl shadow-xl border border-white/40 
              flex flex-col items-center justify-center text-center bg-blue-100"
@@ -158,7 +158,7 @@ export default function Brands() {
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4, delay: 28 * 0.05, ease: "easeOut" }}
-            viewport={{ once: false, amount: 0.4 }}
+            viewport={{ once: true, amount: 0.4 }}
             whileHover={{ y: -8, scale: 1.05 }}
             className="group relative bg-white/70 backdrop-blur-lg p-6 rounded-2xl shadow-xl border border-white/40 
              flex flex-col items-center justify-center text-center bg-blue-100"
@@ -180,7 +180,7 @@ export default function Brands() {
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4, delay: 31 * 0.05, ease: "easeOut" }}
-            viewport={{ once: false, amount: 0.4 }}
+            viewport={{ once: true, amount: 0.4 }}
             whileHover={{ y: -8, scale: 1.05 }}
             className="group relative bg-white/70 backdrop-blur-lg p-6 rounded-2xl shadow-xl border border-white/40 
              flex flex-col items-center justify-center text-center bg-blue-100"
@@ -202,7 +202,7 @@ export default function Brands() {
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4, delay: 32 * 0.05, ease: "easeOut" }}
-            viewport={{ once: false, amount: 0.4 }}
+            viewport={{ once: true, amount: 0.4 }}
             whileHover={{ y: -8, scale: 1.05 }}
             className="group relative bg-white/70 backdrop-blur-lg p-6 rounded-2xl shadow-xl border border-white/40 
              flex flex-col items-center justify-center text-center bg-blue-100"
