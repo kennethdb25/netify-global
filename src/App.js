@@ -2,7 +2,7 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import About from "./components/About";
 import Brands from "./components/Brands";
-import Contact from "./components/Contact";
+// import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 export default function App() {
@@ -12,7 +12,7 @@ export default function App() {
       <Home />
       <About />
       <Brands />
-      <Contact />
+      {/* <Contact /> */}
       <Footer />
     </div>
   );
