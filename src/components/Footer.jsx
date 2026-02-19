@@ -89,7 +89,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold">Our Location</h3>
             <div className="flex items-center gap-2 text-sm">
               <a
-                href="https://www.google.com/maps/place/PXQ7%2B5G6,+151+Malhacan+Rd,+Meycauayan,+3020+Bulacan/@14.7378212,120.9633918,18.68z"
+                href="https://maps.app.goo.gl/m9wfWdHbUhCbGc1K8"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="relative block group rounded-xl overflow-hidden shadow-lg w-full max-w-md"

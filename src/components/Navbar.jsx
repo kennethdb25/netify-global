@@ -16,12 +16,22 @@ export default function Navbar() {
       {/* Glow line */}
       <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 opacity-80" />
 
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center relative">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center relative ">
         {/* Brand */}
-        <h1 className="font-extrabold text-lg md:text-xl bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text tracking-wide">
-          Netify Global Trading Corporation
-        </h1>
-
+        <Link to="home" smooth offset={-80}>
+          <div className="flex items-center space-x-4 group cursor-pointer">
+            <img
+              src="/assets/netify.png"
+              alt="Netify Logo"
+              className="w-14 h-14 object-contain transition duration-300 group-hover:scale-105"
+            />
+            <h1 className="relative font-black text-base md:text-xl text-black tracking-wider leading-tight uppercase">
+              Netify Global Trading Corporation
+              {/* Subtle underline accent */}
+              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-black transition-all duration-300 group-hover:w-full"></span>
+            </h1>
+          </div>
+        </Link>
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-10 text-sm font-semibold text-gray-800">
           {menu.map((m) => (
