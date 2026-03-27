@@ -125,70 +125,102 @@ export default function Promos() {
 
       {/* MODAL */}
       {selectedPromo && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-md p-4">
+        <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/70 backdrop-blur-md">
           <motion.div
-            initial={{ opacity: 0, scale: 0.85, y: 40 }}
+            initial={{ opacity: 0, scale: 0.9, y: 60 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 0.35 }}
-            className="relative w-full max-w-2xl rounded-3xl overflow-hidden bg-white shadow-2xl"
+            transition={{ duration: 0.3 }}
+            className="
+        relative w-full 
+        h-[92vh] sm:h-auto
+        sm:max-w-2xl 
+        bg-white shadow-2xl 
+        rounded-t-3xl sm:rounded-3xl 
+        overflow-hidden
+      "
           >
-            {/* Close */}
+            {/* CLOSE BUTTON */}
             <button
               onClick={() => setSelectedPromo(null)}
-              className="absolute top-4 right-4 z-20 bg-white/80 hover:bg-white rounded-full p-2 shadow-md transition"
+              className="absolute top-3 right-3 z-20 bg-white/80 hover:bg-white rounded-full p-2 shadow-md"
             >
               ✕
             </button>
 
-            {/* IMAGE */}
-            <div className="relative">
-              <img
-                src={selectedPromo.image}
-                alt={selectedPromo.title}
-                className="w-full h-72 object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+            {/* SCROLLABLE CONTAINER */}
+            <div className="h-full overflow-y-auto">
+              {/* IMAGE */}
+              <div className="relative">
+                <img
+                  src={selectedPromo.image}
+                  alt={selectedPromo.title}
+                  className="
+              w-full 
+              h-52 sm:h-72 
+              object-cover
+            "
+                />
 
-              <div className="absolute bottom-4 left-6 text-white">
-                <h3 className="text-3xl font-bold drop-shadow-lg">
-                  {selectedPromo.title}
-                </h3>
-              </div>
-            </div>
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
 
-            {/* CONTENT */}
-            <div className="p-8 space-y-5">
-              <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-1">
-                  Promo Mechanics
-                </h4>
-                <p className="text-gray-600">{selectedPromo.mechanics}</p>
-              </div>
-
-              <div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-1">
-                  Details
-                </h4>
-                <p className="text-gray-600">{selectedPromo.details}</p>
+                {/* Title */}
+                <div className="absolute bottom-3 left-4 sm:bottom-4 sm:left-6 text-white">
+                  <h3 className="text-xl sm:text-3xl font-bold drop-shadow-lg">
+                    {selectedPromo.title}
+                  </h3>
+                </div>
               </div>
 
-              {/* CTA */}
-              <div className="flex gap-3 pt-4">
-                <a
-                  href="https://www.facebook.com/messages/t/NetifyGlobalComputerStore"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex-1 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold py-3 rounded-xl shadow-lg text-center hover:scale-[1.03] transition"
-                >
-                  Inquire Now
-                </a>
+              {/* CONTENT */}
+              <div className="p-5 sm:p-8 space-y-4 sm:space-y-5">
+                <div>
+                  <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-1">
+                    Promo Mechanics
+                  </h4>
+                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                    {selectedPromo.mechanics}
+                  </p>
+                </div>
 
-                <button
-                  onClick={() => setSelectedPromo(null)}
-                  className="flex-1 border border-gray-300 py-3 rounded-xl hover:bg-gray-100 transition"
-                >
-                  Close
-                </button>
+                <div>
+                  <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-1">
+                    Details
+                  </h4>
+                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                    {selectedPromo.details}
+                  </p>
+                </div>
+
+                {/* CTA */}
+                <div className="flex flex-col sm:flex-row gap-3 pt-4 sticky bottom-0 bg-white">
+                  <a
+                    href="https://www.facebook.com/messages/t/NetifyGlobalComputerStore"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="
+                w-full sm:flex-1 
+                bg-gradient-to-r from-blue-500 to-purple-500 
+                text-white font-semibold 
+                py-3 rounded-xl shadow-lg text-center 
+                active:scale-[0.98] sm:hover:scale-[1.03] transition
+              "
+                  >
+                    Inquire Now
+                  </a>
+
+                  <button
+                    onClick={() => setSelectedPromo(null)}
+                    className="
+                w-full sm:flex-1 
+                border border-gray-300 
+                py-3 rounded-xl 
+                active:scale-[0.98] sm:hover:bg-gray-100 transition
+              "
+                  >
+                    Close
+                  </button>
+                </div>
               </div>
             </div>
           </motion.div>
