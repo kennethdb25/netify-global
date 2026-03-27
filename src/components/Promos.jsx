@@ -77,29 +77,35 @@ export default function Promos() {
             onClick={() => setSelectedPromo(promo)}
             className="cursor-pointer relative rounded-3xl overflow-hidden shadow-2xl group"
           >
-            {/* Image */}
+            {/* Background (fills space) */}
             <img
               src={promo.image}
               alt={promo.title}
-              className="w-full h-[440px] object-cover group-hover:scale-105 transition duration-500"
+              className="absolute inset-0 w-full h-full object-cover blur-xl scale-110 opacity-40"
+            />
+
+            {/* Main Image (no crop) */}
+            <img
+              src={promo.image}
+              alt={promo.title}
+              className="relative w-full h-[440px] object-contain z-10 transition duration-500 group-hover:scale-105"
             />
 
             {/* Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent z-20"></div>
 
             {/* Badge */}
-            <div className="absolute top-4 left-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-lg">
+            <div className="absolute top-4 left-4 z-30 bg-gradient-to-r from-pink-500 to-purple-500 text-white text-xs font-semibold px-3 py-1 rounded-full shadow-lg">
               PROMOTION
             </div>
 
             {/* Content */}
-            <div className="absolute bottom-0 p-8 text-white">
+            <div className="absolute bottom-0 p-8 text-white z-30">
               <h3 className="text-3xl font-bold mb-2">{promo.title}</h3>
               <p className="text-sm text-gray-200 opacity-80 line-clamp-2">
                 {promo.shortDescription || "Click to view promo details"}
               </p>
 
-              {/* CTA */}
               <div className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-blue-300 group-hover:gap-3 transition-all">
                 View Details →
               </div>
